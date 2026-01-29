@@ -31,23 +31,70 @@
             text-align: center;
         }
 
-        /* Gradient Title Restored */
-        .title-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            background: linear-gradient(135deg, #ff6b6b, #ffa726, #42a5f5, #ab47bc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
-        }
+    /* Desktop / default */
+.title-section h1 {
+    font-size: 4.5rem;      
+    font-weight: 800;       
+    margin-bottom: 0;       
+    line-height: 1.1;       
+    letter-spacing: -1px;   
+    background: linear-gradient(
+        45deg,
+        #ff5a5f,  /* brighter coral */
+        #ffb347,  /* richer yellow-orange */
+        #42a5f5,  /* vibrant blue */
+        #ab47bc,  /* vivid purple */
+        #66bb6a   /* fresh green */
+    );
+    background-size: 300% 300%;       
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleGradientShift 10s ease infinite; /* subtle offset from banner */
+}
 
-        .title-section .subtitle {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #666;
-        }
+.title-section .subtitle {
+    font-size: 1.25rem;     
+    font-weight: 400;
+    color: #000;            
+    margin-top: 8px;        
+    letter-spacing: 0.5px;  
+}
+
+/* Title gradient animation - offset from hero banner */
+@keyframes titleGradientShift {
+    0% { background-position: 0% 60%; }
+    50% { background-position: 100% 40%; }
+    100% { background-position: 0% 60%; }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .title-section h1 {
+        font-size: 3rem;    
+        letter-spacing: -0.5px;
+        line-height: 1.15;
+    }
+
+    .title-section .subtitle {
+        font-size: 1.1rem;
+        margin-top: 6px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .title-section h1 {
+        font-size: 2.2rem;  
+        letter-spacing: -0.3px;
+        line-height: 1.2;
+    }
+
+    .title-section .subtitle {
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+}
 
         /* 2. Elegant Banner Strip */
         .hero-banner {
