@@ -72,7 +72,7 @@
             background: white;
         }
 
-     /* Section H2 with gradient text based on accent class */
+  /* Section H2 gradient text for each accent */
 .section h2 {
     font-size: 2.2rem;
     font-weight: 700;
@@ -84,25 +84,35 @@
     justify-content: center;
     gap: 16px;
 
-    /* Default gradient (fallback if no accent class) */
+    /* Default gradient fallback */
     background: linear-gradient(135deg, #ff6b6b, #ffa726, #42a5f5, #ab47bc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Accent-specific gradients */
+/* Accent-specific gradients applied THROUGH the letters */
 .section h2.accent-orange {
     background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .section h2.accent-blue {
     background: linear-gradient(135deg, #42a5f5, #66bb6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .section h2.accent-pink {
     background: linear-gradient(135deg, #ab47bc, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
+
 
 
         .section h2::before,
