@@ -85,14 +85,20 @@
             gap: 16px;
         }
 
-        .section h2::before, .section h2::after {
-            content: '';
-            flex: 1;
-            height: 2px; /* Thinner lines */
-            background: #eee; /* Softer color */
-            border-radius: 2px;
-            max-width: 100px; /* Limits line length for elegance */
-        }
+        .section h2::before,
+.section h2::after {
+    content: '';
+    flex: 1;
+    height: 3px;
+    max-width: 120px;
+    border-radius: 3px;
+    background: linear-gradient(
+        90deg,
+        rgba(255,107,107,0.2),
+        rgba(66,165,245,0.6)
+    );
+}
+
 
         .accent-orange { color: #ff6b6b; }
         .accent-yellow { color: #ffa726; }
